@@ -1,0 +1,444 @@
+footer {
+  padding-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: -1px;
+    bottom: -1px;
+    top: 0;
+    z-index: -1;
+    background: $gradient-8;
+    width: 100%;
+  }
+
+  .shape-style {
+    span {
+      width: 120px;
+      height: 120px;
+      border-radius: 100px 130px 100px 315px;
+      position: absolute;
+      background: $light-color-2;
+      @include animation(rotateani 10s linear infinite alternate);
+
+      &::nth-child(1) {
+        bottom: auto;
+        left: -3%;
+        top: -20px;
+        width: 150px;
+        height: 150px;
+      }
+
+      &:nth-child(2) {
+        width: 50px;
+        height: 50px;
+        top: 15%;
+        right: 10%;
+      }
+
+      &:nth-child(3) {
+        width: 75px;
+        height: 75px;
+        top: 320px;
+        right: 7%;
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      &:nth-child(4) {
+        width: 100px;
+        height: 100px;
+        top: 38%;
+        right: auto;
+        left: 1%;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      &:nth-child(5) {
+        width: 50px;
+        height: 50px;
+        right: 40%;
+        bottom: 45%;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      &:nth-child(6) {
+        width: 100px;
+        height: 100px;
+        right: 6%;
+        bottom: 100px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      &:nth-child(7) {
+        width: 50px;
+        height: 50px;
+        right: 5%;
+        bottom: 12%;
+      }
+
+      &:nth-child(8) {
+        width: 100px;
+        height: 100px;
+        right: auto;
+        bottom: 11%;
+        left: 15%;
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+
+  .footer-top {
+    h2 {
+      position: relative;
+      color: $light-color;
+      font-size: 4rem;
+      font-weight: 100;
+      line-height: 1.3;
+      margin-bottom: 3rem;
+
+      span {
+        font-weight: 700;
+        color: $primary-color;
+      }
+    }
+
+    .download-app-button {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      @include transition(0.3s ease-in);
+    .secondary_btn 
+    {
+      background: $dark-color-2 !important;
+      &:hover 
+      {
+        background: $dark-color !important;
+      }
+    }
+    .primary_btn 
+    {
+      background: $gradient-2 !important;
+      p 
+      {
+        color: $dark-color !important;
+      }
+      &:hover 
+      {
+        background: $gradient !important;
+        
+      }
+      i 
+      {
+        color: $dark-color !important;
+      }
+    }
+      .download-btn {
+        border: 0.1rem solid $light-color;
+        margin-right: 2rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        color: $light-color;
+        align-items: center;
+        float: left;
+        padding: 0.5rem 3rem;
+        @include border-radius(5rem);
+        margin-bottom: 1rem;
+        text-decoration: none;
+        @include transition(all 0.3s);
+
+        i {
+          font-size: 2.8rem;
+          line-height: 2.8rem;
+          margin-right: 1rem;
+          color: $light-color;
+        }
+
+        p {
+          font-size: 1.6rem;
+          line-height: 2rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          color: $light-color;
+
+          small {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: 400;
+          }
+        }
+
+        &:hover,
+        &.active {
+          background-color: $dark-color;
+        }
+
+        &:hover i,
+        &.active i {
+          color: $light-color;
+        }
+      }
+    }
+
+    .inner-column {
+      h2 {
+        position: relative;
+        color: $light-color;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 5rem;
+        margin-bottom: 3rem;
+        text-align: right;
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      .subscribe-form form {
+        position: relative;
+
+        input {
+          display: block;
+          width: 100%;
+          height: 6rem;
+          font-size: 1.4rem;
+          padding: 1.4rem 4rem;
+          @include border-radius(5rem);
+          background: transparent;
+          font-family: $poppins;
+          border: 0.1rem solid $light-color;
+          color: $light-color;
+          outline: 0;
+          @include transition(all 0.3s);
+           &:focus 
+           {
+            background: $dark-color-4;
+           }
+        }
+
+        button {
+          position: absolute;
+          right: 0.2rem;
+          top: 0.2rem;
+          outline: 0;
+          height: 5.6rem;
+          color: $text-color;
+          font-weight: 600;
+          border: none;
+          font-size: 1.6rem;
+          line-height: 0;
+          text-align: center;
+          background: $gradient-2;
+          @include transition(all 0.3s 0s);
+          @include border-radius(5rem);
+          padding: 1.5rem 4rem;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          &:hover 
+          {
+            background: $gradient-5;
+            color: $light-color;
+          }
+        }
+      }
+    }
+  }
+
+  .widgets-section {
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
+
+    .footer-widget {
+      h2 {
+        position: relative;
+        color: #ffffff;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        letter-spacing: 0.1rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $light-color;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+
+      .logo {
+        img {
+          width: 40%;
+          margin-bottom: 30px;
+        }
+      }
+
+      .footer-info {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          position: relative;
+          padding-left: 2.5rem;
+          font-size: 1.6rem;
+          margin-bottom: 1.2rem;
+          line-height: 1.8;
+          font-weight: 400;
+          color: $light-color-8;
+
+          i {
+            position: absolute;
+            content: "";
+            left: 0px;
+            top: 0.5rem;
+            color: $light-color;
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .list {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          margin: 2rem 0;
+          a {
+            position: relative;
+            font-size: 1.6rem;
+            padding-left: 0rem;
+            color: $light-color-8;
+            transition: all 0.3s ease;
+            text-decoration: none;
+
+            &:hover {
+              color: $primary-color-1;
+            }
+          }
+        }
+      }
+
+      &.twitter-widget .tweet-block {
+        position: relative;
+        margin-bottom: 2rem;
+
+        p {
+          position: relative;
+          font-size: 1.6rem;
+          line-height: 1.8;
+          text-align: left;
+          margin-bottom: 1rem;
+          color: rgba(255, 255, 255, 0.95);
+
+          i {
+            font-size: 1rem;
+            margin-right: 8px;
+          }
+        }
+
+        .author-name {
+          position: relative;
+          color: $secondary-color;
+          font-size: 1.4rem;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .footer-bottom 
+  {
+    .inner-content 
+    {
+      padding: 2rem 0px;
+      border-top: 0.1rem solid $light-color-1;
+
+      p
+      {
+        position: relative;
+        color: #ffffff;
+        font-size: 1.6rem;
+        span 
+        {
+          color: $primary-color;
+        }
+      }
+      .social-icon 
+      {
+        list-style-type: none;
+        text-align: right;
+        gap: 2rem;
+        display: flex;
+        justify-content: end;
+        li 
+        {
+          position: relative;
+          a 
+          {
+            position: relative;
+            display: block;
+            font-size: 2rem;
+            color: $light-color-8;
+            transition: all 0.3s ease;
+            &:hover 
+            {
+              color: #ffcc00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyframes(rotateani) {
+  from {
+    @include transform(rotate(0deg));
+  }
+
+  to {
+    @include transform(rotate(120deg));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MEDIA QUREY
+@media only screen and (max-width: 991px) {
+  footer .footer-top h2 {
+    text-align: left !important;
+    font-size: 35px !important;
+  }
+
+  footer .footer-top .download-app-button {
+    margin-bottom: 1.5rem;
+  }
+
+  footer .footer-top .inner-column h2 {
+    text-align: left !important;
+    font-size: 35px !important;
+  }
+
+}
+

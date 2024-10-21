@@ -1,0 +1,62 @@
+.button 
+{
+    font-family: $poppins;
+    
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    color: $dark-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include border-radius(5rem);
+    color: $dark-color;
+    display: inline-block;
+
+}
+
+.primary_btn
+{
+    @include transition(0.5s ease 0s);
+    background: $secondary-color;
+    border: 0.2rem solid $primary-color;
+    &:hover 
+    {
+       background: $dark-color;
+       border-color: $light-color-8;
+       color: $light-color;
+    }
+}
+.secondary_btn
+{
+    background: $dark-color-8;
+    color: $light-color;
+    @include transition(0.5s ease 0s);
+    border: 0.2rem solid $light-color-8;
+   &:hover 
+   {
+    background: $gradient;
+    border-color: $light-color-4;
+    color: $dark-color;
+   }
+}
+
+
+.newsletter_btn 
+{
+    font-family: $poppins;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    width: 170px;
+    background:$gradient;
+    outline: none;
+    border: none;
+    color: $dark-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover 
+    {
+        background: $gradient-1;
+    }
+}

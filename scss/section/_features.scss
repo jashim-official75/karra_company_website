@@ -1,0 +1,104 @@
+#features
+{
+    background: $dark-gray;
+    .swiper-slide
+    {
+        position: relative;
+        backdrop-filter: blur(2rem);
+        border: 0.1rem solid $light-color-4;
+        width: 35rem;
+        // height: 50rem;
+        @include border-radius(1.5rem);
+        overflow: hidden;
+        @include box-shadow(0 0.5rem 2rem $dark-color-1);
+    }
+    .featured_card 
+        {
+          position: relative;
+            height: 100%;
+            width: 100%;
+            color: $light-color;
+            &-img 
+            {
+               position: relative;          
+                @include border-radius(1.5rem);
+              img 
+              {
+                position: relative;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                left: 0;
+              }
+                &-content 
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background: $gradient-5;
+                    height: -100%;
+                    @include transition(5s ease );
+                    h1 
+                    {
+                        position: absolute;
+                        bottom: 1rem;
+                        word-break: break-all;
+                        width: 100%;
+                        font-size: 3rem;
+                        padding:0 2rem;
+                        color: $light-color;
+                        text-align: center;
+                        @include transition(1s ease 0s);
+                    }
+                }
+            }
+        }
+}
+
+.swiper-slide-active   .featured_card-img-content 
+{
+   height: 100%;
+
+}
+.swiper-slide-active   h1
+{
+   color: $light-color !important;
+   bottom: 5rem !important;
+}
+.mySwiper1 .swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+    width: 50rem;
+}
+
+.mySwiper1 .swiper-wrapper
+{
+    width: 100%;
+
+}
+
+
+  .mySwiper1  .swiper-button-next,
+  .mySwiper1 .swiper-button-prev {
+      background-color: $light-color-8;
+      border: 0.2rem solid $light-color;
+      top: 50%;
+      @include transform(translateY(-50%) scale(0));
+     right: 1rem;
+      padding: 3rem;
+      color: $light-color !important;
+      fill: black !important;
+      @include border-radius(5rem);
+      stroke: black !important;
+      margin: 0;
+      background: none;
+      &:hover 
+  {
+      background: $light-color;
+      color: $dark-color !important;
+      @include transform(translateY(-50%) scale(0.9))
+  }
+  }

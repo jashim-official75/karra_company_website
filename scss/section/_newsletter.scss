@@ -1,0 +1,127 @@
+
+.newsletter {
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    width: 100%;
+    height: 100vh;
+    background: $gradient-7;
+    display: none;
+    z-index: 10000000000000000;
+  
+&_inner 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    #close_icon 
+    {
+        position: absolute;
+        cursor: pointer;
+        top: -2rem;
+        width: 5rem;
+        height: 5rem;
+        right: -2rem;
+        @extend .flex_center;
+        background: $text-color;
+        @include border-radius(50%);
+        i 
+        {
+            font-size: 3.5rem;
+            color: $light-color
+        }
+        &:hover i
+        {
+            color: $light-color-6;
+        }
+    }
+    max-width: 60rem;
+    background: $light-color;
+    padding: 5rem 2rem;
+    backdrop-filter: blur(2rem);
+    .mailbox 
+    {
+        position: absolute;
+        background: $gradient-6;
+        width: 10rem;
+        height: 10rem;
+        top: -5rem;
+        @include border-radius(50%);
+        border: 0.5rem solid $light-color;
+        left: 50%;
+        @include transform(translateX(-50%));
+        @extend .flex_center;
+        i 
+        {
+            font-size: 6rem;
+            color: $light-color;
+        }
+    }
+ 
+}
+    h1 
+    {
+        text-align: center;
+        color: $dark-color-8;
+    }
+    p 
+    {
+        text-align: center;
+        color: $dark-color-8;
+        
+    }
+    &::after 
+    {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $dark-color;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    &-form 
+    {
+        background: $light-color;
+        position: relative;
+        height: auto;
+        z-index: 2; 
+        @include border-radius(5rem);
+      overflow: hidden;
+      border: 0.2rem solid $light-color-1;
+        input 
+        {
+            width: 100%;
+      height: 100%;
+      border: none;
+      padding: 2.5rem 0 2.5rem 5rem;
+      background: $dark-color;
+      color: $light-color;
+      padding-right: 20rem; 
+      @include border-radius(5rem);
+      overflow: hidden;
+   
+        }
+        &::after 
+        {
+            position: absolute;
+            content: '';
+            left: -2px;
+            right: -2px;
+            top: -2px;
+            bottom: -2px;
+            background: $gradient;
+            z-index: -1;
+        }
+    }
+}
+
+::placeholder 
+{
+  color: $light-color !important;
+} 

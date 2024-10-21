@@ -1,0 +1,61 @@
+#services {
+    // background: $text-color;
+    // background: $dark-color url("../../images/saigons_16x9artboard-3-1661139992717.jpg");
+    background: linear-gradient(0deg, $dark-color-2, $dark-color-4), url("../../images/saigons_16x9artboard-3-1661139992717.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    .service_card {
+        position: relative;
+
+        &-img {
+            position: relative;
+            overflow: hidden;
+            @include border-radius(1.5rem);
+            // height: 60rem;
+            img {
+                width: 100%;
+                @include transition(0.5s ease 0s);
+                @include border-radius(1.5rem);
+            }
+        }
+
+        &-content {
+            position: absolute;
+            bottom: 8rem;
+            @extend .flex_center;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            gap: 2rem;
+
+            h1 {
+                color: $light-color;
+                -webkit-text-stroke: 0.11rem $light-color;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 1rem;
+                text-transform: uppercase;
+                font-size: clamp(3rem , 5vw ,6rem);
+                @include transition(0.5s ease 0s);
+            }
+
+            h2 {
+                color: $light-color;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+        &:hover 
+        {
+            img 
+            {
+                @include transform(scale(1.1) translateY(-2rem));
+                filter: grayscale(0.5);
+            }
+            h1 
+            {
+                letter-spacing: 0.6rem;
+            }
+        }
+    }
+}

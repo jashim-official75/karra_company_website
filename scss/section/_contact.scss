@@ -1,0 +1,9 @@
+#contact 
+{
+    background: $gradient-6;
+    @include transition(0.2s);
+    &:hover 
+    {
+        filter: saturate(2);
+    }
+}

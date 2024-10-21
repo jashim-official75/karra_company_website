@@ -1,0 +1,139 @@
+#news 
+{
+   background: $dark-gray;
+   .newscard_lg 
+   {
+    padding-right:3rem;
+
+    &-info 
+    {
+        @extend .flex;
+        align-items: center;
+        gap: 2rem ;
+        margin-bottom: 3rem;
+        &-cattegory
+        {
+            background: $dark-color-4;
+            padding: 0.5rem 2rem;
+            @include border-radius(50rem);
+            color: $light-color;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            &:hover 
+            {
+                background: $dark-color;
+            }
+        }
+        &-date
+        {
+            font-size: 2rem;
+        }
+    }
+    &-title 
+    {
+        h2 
+        {
+            font-family: $poppins;
+            font-size: 5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0;
+        }
+    }
+  
+   }
+   .newscard-lg-img 
+   {
+       @include border-radius(1.5rem);
+       overflow: hidden;
+       margin-bottom: 5rem;
+ 
+       img 
+       {
+           width: 100%;
+        //    @include transition(0.7s ease 0s);
+        //    &:hover 
+        //    {
+        //     @include transform(scale(1.1));
+        //    }
+       }
+   }
+   .news_content 
+   {
+   
+    @extend .flex;
+    justify-content: flex-start;
+    flex-direction: column;
+   }
+  .newssection_titile 
+  {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .section_title 
+    {
+        color: $dark-color;
+    }
+    .section_subtitle 
+    {
+        color: $dark-color-8;
+    }
+  }
+
+    
+}
+
+.newscard 
+{
+    display: flex;
+    gap: 1rem;
+    // @include box-shadow(0 0 1rem 0.5rem $dark-color-1);
+    padding: 1rem;
+     &:hover 
+    {
+        img 
+        {
+             @include transform(scale(1.1));
+        }
+    }
+    &_img 
+    {
+        width: 100%;
+        height: 100%;
+        @include border-radius(1rem);
+        overflow: hidden;
+     
+        img 
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transition(0.7s ease 0s);
+        }
+    }
+    &-content 
+    {
+       
+        &_title 
+        {
+            h2 
+            {
+                font-family: $poppins;
+                font-size: 2rem;
+                color: $dark-color;
+                letter-spacing: 0;
+                line-height: 1.2;
+            }
+        }
+        &_desc
+        {
+            p 
+            {
+               color: $dark-color-6;
+               font-size: 1.5rem;
+            }
+        }
+    }
+}

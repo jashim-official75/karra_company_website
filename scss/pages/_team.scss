@@ -1,0 +1,141 @@
+#team_hero {
+
+    background: $light-color;
+
+    .team_members {
+        position: relative;
+
+    }
+
+    .office_work-one {
+        position: relative;
+        left: 4rem;
+    }
+}
+
+#team_values {
+    background: $light-gray;
+
+    .team_card-wrapper {
+        padding-left: 8rem;
+    }
+
+    .team_card {
+        @extend .flex;
+        align-items: center;
+        gap: 4rem;
+        margin-bottom: 3rem;
+
+        &-icon {
+            background: $dark-color-8;
+            @extend .flex_center;
+            height: 8rem;
+            width: 8rem;
+            @include border-radius(50%);
+            @include box-shadow(0 0 0 1rem $light-color-6);
+
+            span {
+                display: block;
+
+                i {
+                    font-size: 4rem;
+                    color: $secondary-color;
+                    display: block;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        &-title {
+            h3 {
+                font-size: 3rem;
+                color: $dark-color-6;
+            }
+        }
+    }
+}
+
+
+#creative_team {
+    background: $dark-gray;
+
+    .team_card {
+        background: $light-color-6;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        padding:3rem 0rem;
+        display: flex;
+        align-items: center;
+        @include box-shadow(0 1rem 2rem $dark-color-1);
+
+        &_profile {
+            width: 50%;
+            border-right: 0.1rem solid $dark-color-1;
+           
+            &-img {
+                img {
+                    width: 15rem;
+                    @include border-radius(50%);
+                }
+            }
+
+            &-name {
+                h2 {
+                    font-family: $poppins;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    text-align: center;
+                    color: $dark-color-8;
+                    margin: 1rem 0;
+                }
+            }
+
+            &-position {
+                h3 {
+                    font-family: $poppins;
+                    font-size: 2rem;
+                    text-align: center;
+                    color: $dark-color-6;
+                    margin: 1rem 0;
+                }
+            }
+
+            &-socail {
+                ul {
+                    @extend .flex_center;
+                    gap: 2rem;
+
+                    li {
+                        a {
+                            i {
+                                font-size: 3rem;
+                                color: $dark-color-6;
+
+                                &:hover {
+                                    color: $dark-color-8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-info {
+            position: relative;
+            width: 50%;
+            padding: 1rem;
+
+            i {
+                font-size: 3rem;
+                color: $dark-color-4;
+            }
+
+            p 
+            {
+                color: $dark-color-6;
+            }
+        }
+    }
+}

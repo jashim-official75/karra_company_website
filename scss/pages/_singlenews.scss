@@ -1,0 +1,35 @@
+#single_news 
+{
+    position: relative;
+    .singlenews_post 
+    {
+        h1 
+        {
+            font-size: 4rem;
+            color: $dark-color;
+        }
+        h2 
+        {
+            font-size: 4rem;
+            font-weight: 700;
+            color: $dark-color;
+        }
+        .date 
+        {
+            h3 
+            {
+                font-size: 2rem !important;
+                margin: 3rem 0;
+            }
+        }
+        .left_img 
+        {
+            height: 60rem;
+            width: 100%;
+            object-fit:cover;
+            object-position: 0 5%;
+            position: relative;
+            left: -5rem;
+        }
+    }
+}

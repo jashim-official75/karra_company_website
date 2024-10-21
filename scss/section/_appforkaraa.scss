@@ -1,0 +1,27 @@
+#app 
+{
+    position: relative;
+padding-bottom: 10rem;
+    background-image: linear-gradient(to top ,$light-color 30%, $dark-color-2), url("../../images/background-apps.webp");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: 5% 80%;
+    background-attachment: fixed;
+    @include box-shadow($shadow);
+    border-top: 0.1rem solid $dark-color-1;
+    .app_img 
+    {
+        width: 90%;
+        img 
+        {
+            width: 100%;
+        }
+    }
+    .app_text 
+    {
+        padding: 2rem 0;
+    }
+
+}
+
